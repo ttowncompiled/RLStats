@@ -1,0 +1,120 @@
+2
+upper_quarter_grand_finals
+NRG
+Precision_Z
+K C 459
+C Y + 457
+Y A - 452
+A Z - 451
+Z C + 449
+C A 448
+A X + 446
+X Z 443
+Z A - 442
+A Z + 438
+Z B - 438
+B X + 436
+X C - 434
+C Y + 431
+Y A - 429
+A Z + 426
+Z B - 423
+B Z - 421
+Z C - 416
+C X + 415
+X A - 412
+A Y + 410
+Y A - 408
+A B 406
+B A 406
+A Y + 404
+Y A - 403
+A X - 401
+X Y 358
+Y C - 356
+C B 352
+B X - 351
+X Y 350
+Y Z 347
+Z A - 346
+A X + 344
+X C - 341
+C Y + 338
+Y B - 337
+B Z + 332
+Z Y 330
+Y A + 328
+A C 324
+C Y - 321
+Y < 318
+I A 315
+A X - 312
+X B + 309
+B C 307
+C Z + 304
+Z X 300
+X B + 258
+B A 252
+A X - 252
+X * 250
+K Y 248
+Y X 243
+X * 242
+K B 237
+B X + 236
+X Z 230
+Z Y 229
+Y * 228
+K A 227
+A Z - 222
+Z C + 218
+C X - 216
+X Y 212
+Y A + 209
+A X + 203
+X A + 158
+A Z - 156
+Z C - 155
+C X + 152
+X Y 143
+Y ? 143
+R B 141
+B A 137
+A Z + 136
+Z B - 133
+B Y + 132
+Y X 128
+X A - 126
+A C 125
+C A 123
+A B 121
+B X + 119
+X Y 114
+Y B + 112
+B Z - 110
+Z * 106
+K A 103
+A Y + 100
+Y C + 56
+C A 54
+A X + 50
+X A - 45
+A X + 43
+X A - 40
+A B 38
+B A 36
+A Z + 34
+Z C - 31
+C X + 27
+X A - 25
+A Y - 23
+Y X 20
+X C - 18
+C X - 14
+X B - 13
+B ? 7
+R C 5
+C B 2
+B X - 0
+X $ 0
+$
