@@ -1,15 +1,15 @@
 2
-upper_quarter_grand_finals
+Upper Quarter Grand Finals
 NRG
-Precision_Z
-K C 459
+Precision Z
+K C = 459
 C Y + 457
 Y A - 452
 A Z - 451
 Z C + 449
-C A 448
+C A = 448
 A X + 446
-X Z 443
+X Z = 443
 Z A - 442
 A Z + 438
 Z B - 438
@@ -25,332 +25,334 @@ C X + 415
 X A - 412
 A Y + 410
 Y A - 408
-A B 406
-B A 406
+A B = 406
+B A = 406
 A Y + 404
 Y A - 403
 A X - 401
-X Y 358
+X Y = 358
 Y C - 356
-C B 352
+C B = 352
 B X - 351
-X Y 350
-Y Z 347
+X Y = 350
+Y Z = 347
 Z A - 346
 A X + 344
 X C - 341
 C Y + 338
 Y B - 337
 B Z + 332
-Z Y 330
+Z Y = 330
 Y A + 328
-A C 324
+A C = 324
 C Y - 321
-Y / 318
-I A 315
+Y / / 318
+I A = 315
 A X - 312
 X B + 309
-B C 307
+B C = 307
 C Z + 304
-Z X 300
+Z X = 300
 X B + 258
-B A 252
+B A = 252
 A X - 252
-X * 250
-K Y 248
-Y X 243
-X * 242
-K B 237
+X * * 250
+K Y = 248
+Y X = 243
+X * * 242
+K B = 237
 B X + 236
-X Z 230
-Z Y 229
-Y * 228
-K A 227
+X Z = 230
+Z Y = 229
+Y * * 228
+K A = 227
 A Z - 222
 Z C + 218
 C X - 216
-X Y 212
+X Y = 212
 Y A + 209
 A X + 203
 X A + 158
 A Z - 156
 Z C - 155
 C X + 152
-X Y 143
-Y ? 143
-R B 141
-B A 137
+X Y = 143
+Y ? ? 143
+R B = 141
+B A = 137
 A Z + 136
 Z B - 133
 B Y + 132
-Y X 128
+Y X = 128
 X A - 126
-A C 125
-C A 123
-A B 121
+A C = 125
+C A = 123
+A B = 121
 B X + 119
-X Y 114
+X Y = 114
 Y B + 112
 B Z - 110
-Z * 106
-K A 103
+Z * * 106
+K A = 103
 A Y + 100
 Y C + 56
-C A 54
+C A = 54
 A X + 50
 X A - 45
 A X + 43
 X A - 40
-A B 38
-B A 36
+A B = 38
+B A = 36
 A Z + 34
 Z C - 31
 C X + 27
 X A - 25
 A Y - 23
-Y X 20
+Y X = 20
 X C - 18
 C X - 14
 X B - 13
-B ? 7
-R C 5
-C B 2
+B ? ? 7
+R C = 5
+C B = 2
 B X - 0
-X $ 0
+X $ $ 0
 $
-K X 457
+K X = 457
 X A - 456
-A B 453
+A B = 453
 B X + 452
 X A - 451
 A X + 446
-X Z 444
-Z Y 441
-Y Z 440
+X Z = 444
+Z Y = 441
+Y Z = 440
 Z C + 437
-C B 435
+C B = 435
 B Y + 431
 Y C - 428
 C Z + 426
 Z A - 424
-A ! 422
-I X 416
+A X ! 422
+I X = 416
 X A + 415
 A Z - 414
 Z C + 411
 C Y - 409
 Y A + 408
 A Z - 406
-Z X 404
+Z X = 404
 X A + 401
 A Z + 359
-Z Y 356
+Z Y = 356
 Y A + 352
 A X - 351
 X C + 348
-C A 347
+C A = 347
 A X + 339
 X C - 337
 C X + 333
-X Z 330
-Z ! 329
-R A 326
+X Z = 330
+Z A ! 329
+R A = 326
 A Y + 325
 Y C + 322
 C X - 319
-X ! 317
-R Y 314
+X B ! 317
+R Y = 314
 Y B + 312
-B C 311
+B C = 311
 C Z + 309
-Z X 307
+Z X = 307
 X B + 304
 B Z - 301
 Z C - 259
 C Y - 256
-Y Z 255
-Z X 253
-X Y 248
+Y Z = 255
+Z X = 253
+X Y = 248
 Y B + 243
 B Z - 240
 Z C - 238
-C A 231
+C A = 231
 A Z + 230
-Z X 229
-X Z 223
-Z ! 222
-R A 218
-A B 217
-B * 216
-K Z 213
+Z X = 229
+X Z = 223
+Z A ! 222
+R A = 218
+A B = 217
+B * * 216
+K Z = 213
 Z A - 209
 A Y + 206
 Y B - 204
-B A 203
-A B 202
+B A = 203
+A B = 202
 B Z + 201
 Z C - 158
-C A 155
-A / 154
-I Z 153
+C A = 155
+A / / 154
+I Z = 153
 Z B + 151
 B Y - 150
-Y X 149
+Y X = 149
 X B - 148
 B Z - 146
-Z * 142
-K B 139
-B C 135
-C B 133
-B C 131
-C * 131
-K Y 129
+Z * * 142
+K B = 139
+B C = 135
+C B = 133
+B C = 131
+C * * 131
+K Y = 129
 Y B - 126
 B X + 122
 X C - 120
-C B 119
+C B = 119
 B X + 115
 X C - 111
-C A 109
-A B 107
+C A = 109
+A B = 107
 B Y + 105
 Y A - 102
 A X + 100
-X Y 58
-Y X 57
+X Y = 58
+Y X = 57
 X A + 54
 A Y - 51
 Y C + 48
-C A 43
+C A = 43
 A Z + 41
 Z B + 38
 B X - 37
-X ? 34
-I C 31
+X ? ? 34
+I C = 31
 C Y - 29
 Y A + 27
 A Z - 25
 Z B + 21
 B Y - 18
 Y A + 16
-A C 14
+A C = 14
 C Z - 11
-Z X 6
-X ! 5
-I C 4
-C $ 0
+Z X = 6
+X B ! 5
+I C = 4
+C $ $ 0
 $
-K A 457
-A B 454
+K A = 457
+A B = 454
+A Z # 452
 B Y + 452
 Y C + 449
 C X - 447
-X ! 444
-R X 443
+X C ! 444
+R X = 443
 X A + 431
 A X - 429
 X A - 426
 A Y - 424
 Y A + 423
 A Z - 420
-Z Y 414
+Z Y = 414
 Y B + 412
 B X - 408
 X A + 406
 A Z - 404
 Z C - 402
-C A 359
+C A = 359
 A X + 359
 X B - 358
-B C 355
+B C = 355
 C Z - 355
 Z B - 351
 B Y + 349
 Y C - 346
 C X - 344
 X B + 340
-B A 338
-A ? 338
-I B 335
+B A = 338
+A ? ? 338
+I B = 335
 B X + 334
-X Z 331
+X Z = 331
 Z C + 328
-C B 327
-B C 325
-C A 322
+C B = 327
+B C = 325
+C A = 322
 A X + 320
 X C - 318
 C Z - 316
-Z ! 312
-I C 310
-C A 309
+Z B ! 312
+I C = 310
+C A = 309
 A X + 306
-X Y 305
-Y X 302
-X Y 300
+X Y = 305
+Y X = 302
+X Y = 300
 Y C - 257
-C A 256
-A * 255
-K A 252
-A C 249
+C A = 256
+A * * 255
+K A = 252
+A C = 249
 C X + 247
 X B - 245
 B Z - 243
 Z A + 240
-A B 238
+A B = 238
 B Z - 237
-Z * 234
-K Z 232
+Z * * 234
+K Z = 232
 Z B + 229
-B A 228
-A C 224
+B A = 228
+A C = 224
 C X - 223
 X A + 222
 A X - 221
 X B + 220
-B A 215
-A C 212
+B A = 215
+A C = 212
 C X + 208
 X A - 207
 A Y + 204
-A / 201
-I A 158
-A C 153
+A / / 201
+I A = 158
+B Z # 156
+A C = 153
 C Z - 150
 Z A + 147
-A B 145
+A B = 145
 B Z + 140
 Z B - 137
 B Y - 134
-Y X 132
-X * 129
-K B 125
-B ? 129
-R Y 124
+Y X = 132
+X * * 129
+K B = 125
+B ? ? 129
+R Y = 124
 Y A - 122
 A Z + 121
-Z Y 120
+Z Y = 120
 Y C - 118
-C B 113
-B / 113
-I Y 111
+C B = 113
+B / / 113
+I Y = 111
 Y C + 108
-C A 105
-A B 103
-B * 103
-K A 59
+C A = 105
+A B = 103
+B * * 103
+K A = 59
 A X + 57
 X A - 56
 A Z + 52
-Z Y 49
+Z Y = 49
 Y C - 46
-C B 43
-B ! 42
-R C 37
+C B = 43
+B Z ! 42
+R C = 37
 C Y - 37
 Y A + 33
 A Z - 31
-Z Y 30
+Z Y = 30
 Y C + 29
 C X - 27
 X A + 26
@@ -358,38 +360,38 @@ A X - 25
 X C - 19
 C Z + 18
 Z B - 17
-B ? 16
-I X 13
+B ? ? 16
+I X = 13
 X B - 10
-B C 6
+B C = 6
 C Y - 4
-Y / 4
-I Z 0
-Z $ 0
+Y / / 4
+I Z = 0
+Z $ $ 0
 $
-K Z 457
+K Z = 457
 Z C - 455
 C X + 454
-X Z 452
+X Z = 452
 Z B + 448
 B Y + 444
 Y C + 440
-C B 437
-B ! 436
-I C 434
-C A 433
+C B = 437
+B Z ! 436
+I C = 434
+C A = 433
 A X + 430
-X Y 426
+X Y = 426
 Y A + 423
-A C 419
-C B 416
-B C 414
+A C = 419
+C B = 416
+B C = 414
 C Y + 411
 Y B - 409
-B A 406
-A B 404
-B ? 402
-I Y 403
+B A = 406
+A B = 404
+B ? ? 402
+I Y = 403
 Y C - 400
 C Z + 358
 Z A - 357
@@ -401,12 +403,12 @@ A Z + 341
 Z B - 337
 B Y - 335
 Y B + 332
-B A 330
-A ! 329
-I Y 328
-Y Z 323
-Z ! 321
-R A 319
+B A = 330
+A Z ! 329
+I Y = 328
+Y Z = 323
+Z B ! 321
+R A = 319
 A X - 317
 X C + 314
 C Y - 311
@@ -414,66 +416,67 @@ Y A + 308
 A X - 305
 X A + 304
 A Y + 259
-Y X 254
-X / 253
-I Z 251
-Z Y 248
+Y X = 254
+X / / 253
+I Z = 251
+Z Y = 248
 Y C + 245
-C B 244
+C B = 244
 B X - 243
 X A + 238
-A C 235
+A C = 235
 C Z - 233
 Z B + 228
-B A 226
-A C 224
-C ? 221
-R A 218
+B A = 226
+A C = 224
+C ? ? 221
+R A = 218
 A X + 216
 X C + 211
 C Z - 209
 Z B + 206
 B X - 200
-X Y 158
+X Y = 158
 Y A + 156
-A / 149
-I C 147
+A / / 149
+I C = 147
 C Z - 145
 Z A + 142
 A Y - 141
 Y ! 140
-R C 137
-C * 134
-K Y 132
-Y X 128
+R C = 137
+C * * 134
+K Y = 132
+Y X = 128
 X B + 123
-B C 121
-C / 118
-I B 115
+B C = 121
+C / / 118
+I B = 115
 B Z + 112
 Z A - 110
 A Z + 108
 Z B - 105
-B A 103
+B A = 103
 A Y + 100
-Y Z 58
-Z Y 57
-Y X 55
-X Z 54
-Z ! 54
-I C 50
+Y Z = 58
+Z Y = 57
+Y X = 55
+X Z = 54
+Z B ! 54
+I C = 50
 C Y - 49
 Y B - 47
+Y C # 44
 B X + 43
-X Y 41
+X Y = 41
 Y C + 38
 C Z - 35
 Z A - 31
 A Z + 27
-Z Y 26
-Y X 21
+Z Y = 26
+Y X = 21
 X C + 20
-C B 16
+C B = 16
 B Y + 14
 Y C - 13
 C X + 12
@@ -484,7 +487,7 @@ C X + 4
 X A - 2
 A X - 0
 X B - 0
-B $ 0
+B $ $ 0
 $
 K Z = 459
 Z Y = 456
