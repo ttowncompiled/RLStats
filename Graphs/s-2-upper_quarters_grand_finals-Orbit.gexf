@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf version="1.1" xmlns="http://www.gexf.net/1.1draft" xmlns:viz="http://www.gexf.net/1.1draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance">
+  <graph defaultedgetype="directed" mode="static">
+    <nodes>
+      <node id="Turtle" label="Turtle" />
+      <node id="Timeout" label="Timeout" />
+      <node id="GarrettG" label="GarrettG" />
+      <node id="Miss" label="Miss" />
+      <node id="Rebound" label="Rebound" />
+      <node id="Kickoff" label="Kickoff" />
+      <node id="Score" label="Score" />
+      <node id="Yield" label="Yield" />
+      <node id="Inbounds" label="Inbounds" />
+      <node id="Moses" label="Moses" />
+      <node id="Save" label="Save" />
+      <node id="Steal" label="Steal" />
+      <node id="Clear" label="Clear" />
+    </nodes>
+    <edges>
+      <edge id="0" source="Turtle" target="GarrettG" weight="12" />
+      <edge id="1" source="Turtle" target="Miss" weight="1" />
+      <edge id="2" source="Turtle" target="Clear" weight="65" />
+      <edge id="3" source="Turtle" target="Yield" weight="1" />
+      <edge id="4" source="Turtle" target="Score" weight="3" />
+      <edge id="5" source="Turtle" target="Moses" weight="7" />
+      <edge id="6" source="Turtle" target="Save" weight="2" />
+      <edge id="7" source="Turtle" target="Steal" weight="63" />
+      <edge id="8" source="GarrettG" target="Turtle" weight="15" />
+      <edge id="9" source="GarrettG" target="Miss" weight="3" />
+      <edge id="10" source="GarrettG" target="Clear" weight="71" />
+      <edge id="11" source="GarrettG" target="Score" weight="3" />
+      <edge id="12" source="GarrettG" target="Moses" weight="12" />
+      <edge id="13" source="GarrettG" target="Save" weight="4" />
+      <edge id="14" source="GarrettG" target="Steal" weight="69" />
+      <edge id="15" source="Rebound" target="Turtle" weight="5" />
+      <edge id="16" source="Rebound" target="GarrettG" weight="9" />
+      <edge id="17" source="Rebound" target="Moses" weight="2" />
+      <edge id="18" source="Kickoff" target="Turtle" weight="3" />
+      <edge id="19" source="Kickoff" target="GarrettG" weight="2" />
+      <edge id="20" source="Kickoff" target="Moses" weight="4" />
+      <edge id="21" source="Inbounds" target="GarrettG" weight="2" />
+      <edge id="22" source="Inbounds" target="Turtle" weight="5" />
+      <edge id="23" source="Inbounds" target="Moses" weight="1" />
+      <edge id="24" source="Moses" target="Turtle" weight="10" />
+      <edge id="25" source="Moses" target="GarrettG" weight="8" />
+      <edge id="26" source="Moses" target="Steal" weight="54" />
+      <edge id="27" source="Moses" target="Clear" weight="52" />
+      <edge id="28" source="Moses" target="Yield" weight="1" />
+      <edge id="29" source="Moses" target="Score" weight="1" />
+      <edge id="30" source="Moses" target="Timeout" weight="1" />
+      <edge id="31" source="Moses" target="Save" weight="6" />
+      <edge id="32" source="Moses" target="Miss" weight="3" />
+    </edges>
+  </graph>
+</gexf>

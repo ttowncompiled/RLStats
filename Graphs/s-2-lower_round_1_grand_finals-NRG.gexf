@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf version="1.1" xmlns="http://www.gexf.net/1.1draft" xmlns:viz="http://www.gexf.net/1.1draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance">
+  <graph defaultedgetype="directed" mode="static">
+    <nodes>
+      <node id="Fireburner" label="Fireburner" />
+      <node id="Timeout" label="Timeout" />
+      <node id="Sadjunior" label="Sadjunior" />
+      <node id="Miss" label="Miss" />
+      <node id="Rebound" label="Rebound" />
+      <node id="Kickoff" label="Kickoff" />
+      <node id="Score" label="Score" />
+      <node id="Yield" label="Yield" />
+      <node id="Inbounds" label="Inbounds" />
+      <node id="Jacob" label="Jacob" />
+      <node id="Save" label="Save" />
+      <node id="Steal" label="Steal" />
+      <node id="Clear" label="Clear" />
+    </nodes>
+    <edges>
+      <edge id="0" source="Fireburner" target="Sadjunior" weight="8" />
+      <edge id="1" source="Fireburner" target="Clear" weight="38" />
+      <edge id="2" source="Fireburner" target="Score" weight="4" />
+      <edge id="3" source="Fireburner" target="Jacob" weight="11" />
+      <edge id="4" source="Fireburner" target="Save" weight="3" />
+      <edge id="5" source="Fireburner" target="Steal" weight="35" />
+      <edge id="6" source="Sadjunior" target="Fireburner" weight="9" />
+      <edge id="7" source="Sadjunior" target="Clear" weight="35" />
+      <edge id="8" source="Sadjunior" target="Score" weight="4" />
+      <edge id="9" source="Sadjunior" target="Jacob" weight="13" />
+      <edge id="10" source="Sadjunior" target="Save" weight="3" />
+      <edge id="11" source="Sadjunior" target="Steal" weight="33" />
+      <edge id="12" source="Rebound" target="Jacob" weight="4" />
+      <edge id="13" source="Rebound" target="Fireburner" weight="2" />
+      <edge id="14" source="Rebound" target="Sadjunior" weight="3" />
+      <edge id="15" source="Kickoff" target="Jacob" weight="3" />
+      <edge id="16" source="Kickoff" target="Fireburner" weight="1" />
+      <edge id="17" source="Kickoff" target="Sadjunior" weight="5" />
+      <edge id="18" source="Inbounds" target="Jacob" weight="2" />
+      <edge id="19" source="Inbounds" target="Sadjunior" weight="1" />
+      <edge id="20" source="Jacob" target="Fireburner" weight="9" />
+      <edge id="21" source="Jacob" target="Sadjunior" weight="12" />
+      <edge id="22" source="Jacob" target="Clear" weight="21" />
+      <edge id="23" source="Jacob" target="Yield" weight="1" />
+      <edge id="24" source="Jacob" target="Score" weight="6" />
+      <edge id="25" source="Jacob" target="Timeout" weight="2" />
+      <edge id="26" source="Jacob" target="Save" weight="3" />
+      <edge id="27" source="Jacob" target="Steal" weight="41" />
+    </edges>
+  </graph>
+</gexf>

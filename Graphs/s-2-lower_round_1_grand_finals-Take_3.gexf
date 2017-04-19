@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf version="1.1" xmlns="http://www.gexf.net/1.1draft" xmlns:viz="http://www.gexf.net/1.1draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance">
+  <graph defaultedgetype="directed" mode="static">
+    <nodes>
+      <node id="Timeout" label="Timeout" />
+      <node id="Rizzo" label="Rizzo" />
+      <node id="Miss" label="Miss" />
+      <node id="Rebound" label="Rebound" />
+      <node id="Yield" label="Yield" />
+      <node id="Kickoff" label="Kickoff" />
+      <node id="Score" label="Score" />
+      <node id="Zanejackey" label="Zanejackey" />
+      <node id="Inbounds" label="Inbounds" />
+      <node id="Save" label="Save" />
+      <node id="Steal" label="Steal" />
+      <node id="Clear" label="Clear" />
+      <node id="Insolences" label="Insolences" />
+    </nodes>
+    <edges>
+      <edge id="0" source="Rizzo" target="Insolences" weight="12" />
+      <edge id="1" source="Rizzo" target="Miss" weight="1" />
+      <edge id="2" source="Rizzo" target="Clear" weight="41" />
+      <edge id="3" source="Rizzo" target="Yield" weight="1" />
+      <edge id="4" source="Rizzo" target="Score" weight="4" />
+      <edge id="5" source="Rizzo" target="Zanejackey" weight="15" />
+      <edge id="6" source="Rizzo" target="Timeout" weight="1" />
+      <edge id="7" source="Rizzo" target="Save" weight="2" />
+      <edge id="8" source="Rizzo" target="Steal" weight="46" />
+      <edge id="9" source="Rebound" target="Zanejackey" weight="1" />
+      <edge id="10" source="Rebound" target="Rizzo" weight="4" />
+      <edge id="11" source="Kickoff" target="Zanejackey" weight="4" />
+      <edge id="12" source="Kickoff" target="Insolences" weight="3" />
+      <edge id="13" source="Zanejackey" target="Insolences" weight="16" />
+      <edge id="14" source="Zanejackey" target="Rizzo" weight="15" />
+      <edge id="15" source="Zanejackey" target="Miss" weight="1" />
+      <edge id="16" source="Zanejackey" target="Clear" weight="67" />
+      <edge id="17" source="Zanejackey" target="Yield" weight="2" />
+      <edge id="18" source="Zanejackey" target="Score" weight="2" />
+      <edge id="19" source="Zanejackey" target="Save" weight="1" />
+      <edge id="20" source="Zanejackey" target="Steal" weight="58" />
+      <edge id="21" source="Inbounds" target="Insolences" weight="4" />
+      <edge id="22" source="Inbounds" target="Zanejackey" weight="2" />
+      <edge id="23" source="Inbounds" target="Rizzo" weight="3" />
+      <edge id="24" source="Insolences" target="Rizzo" weight="15" />
+      <edge id="25" source="Insolences" target="Clear" weight="66" />
+      <edge id="26" source="Insolences" target="Yield" weight="2" />
+      <edge id="27" source="Insolences" target="Score" weight="1" />
+      <edge id="28" source="Insolences" target="Zanejackey" weight="16" />
+      <edge id="29" source="Insolences" target="Timeout" weight="1" />
+      <edge id="30" source="Insolences" target="Save" weight="3" />
+      <edge id="31" source="Insolences" target="Steal" weight="57" />
+    </edges>
+  </graph>
+</gexf>

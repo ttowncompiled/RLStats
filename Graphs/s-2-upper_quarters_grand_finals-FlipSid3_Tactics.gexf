@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf version="1.1" xmlns="http://www.gexf.net/1.1draft" xmlns:viz="http://www.gexf.net/1.1draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance">
+  <graph defaultedgetype="directed" mode="static">
+    <nodes>
+      <node id="Markydooda" label="Markydooda" />
+      <node id="Timeout" label="Timeout" />
+      <node id="Miss" label="Miss" />
+      <node id="Rebound" label="Rebound" />
+      <node id="Kickoff" label="Kickoff" />
+      <node id="gReazymeister" label="gReazymeister" />
+      <node id="Score" label="Score" />
+      <node id="Yield" label="Yield" />
+      <node id="Inbounds" label="Inbounds" />
+      <node id="Kuxir97" label="Kuxir97" />
+      <node id="Save" label="Save" />
+      <node id="Steal" label="Steal" />
+      <node id="Clear" label="Clear" />
+    </nodes>
+    <edges>
+      <edge id="0" source="Markydooda" target="Miss" weight="4" />
+      <edge id="1" source="Markydooda" target="Clear" weight="38" />
+      <edge id="2" source="Markydooda" target="gReazymeister" weight="14" />
+      <edge id="3" source="Markydooda" target="Score" weight="4" />
+      <edge id="4" source="Markydooda" target="Timeout" weight="3" />
+      <edge id="5" source="Markydooda" target="Kuxir97" weight="7" />
+      <edge id="6" source="Markydooda" target="Save" weight="4" />
+      <edge id="7" source="Markydooda" target="Steal" weight="35" />
+      <edge id="8" source="Rebound" target="gReazymeister" weight="3" />
+      <edge id="9" source="Rebound" target="Markydooda" weight="3" />
+      <edge id="10" source="Rebound" target="Kuxir97" weight="1" />
+      <edge id="11" source="Kickoff" target="gReazymeister" weight="2" />
+      <edge id="12" source="Kickoff" target="Markydooda" weight="2" />
+      <edge id="13" source="Kickoff" target="Kuxir97" weight="4" />
+      <edge id="14" source="gReazymeister" target="Markydooda" weight="14" />
+      <edge id="15" source="gReazymeister" target="Miss" weight="2" />
+      <edge id="16" source="gReazymeister" target="Clear" weight="46" />
+      <edge id="17" source="gReazymeister" target="Score" weight="2" />
+      <edge id="18" source="gReazymeister" target="Kuxir97" weight="11" />
+      <edge id="19" source="gReazymeister" target="Save" weight="4" />
+      <edge id="20" source="gReazymeister" target="Steal" weight="38" />
+      <edge id="21" source="Inbounds" target="gReazymeister" weight="2" />
+      <edge id="22" source="Inbounds" target="Kuxir97" weight="1" />
+      <edge id="23" source="Kuxir97" target="Markydooda" weight="16" />
+      <edge id="24" source="Kuxir97" target="Clear" weight="51" />
+      <edge id="25" source="Kuxir97" target="Yield" weight="1" />
+      <edge id="26" source="Kuxir97" target="gReazymeister" weight="12" />
+      <edge id="27" source="Kuxir97" target="Score" weight="2" />
+      <edge id="28" source="Kuxir97" target="Save" weight="3" />
+      <edge id="29" source="Kuxir97" target="Steal" weight="51" />
+    </edges>
+  </graph>
+</gexf>

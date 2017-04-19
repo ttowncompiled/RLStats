@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf version="1.1" xmlns="http://www.gexf.net/1.1draft" xmlns:viz="http://www.gexf.net/1.1draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance">
+  <graph defaultedgetype="directed" mode="static">
+    <nodes>
+      <node id="Timeout" label="Timeout" />
+      <node id="Miss" label="Miss" />
+      <node id="Rebound" label="Rebound" />
+      <node id="Kickoff" label="Kickoff" />
+      <node id="Pluto" label="Pluto" />
+      <node id="Klassux" label="Klassux" />
+      <node id="Score" label="Score" />
+      <node id="Espeon" label="Espeon" />
+      <node id="Yield" label="Yield" />
+      <node id="Inbounds" label="Inbounds" />
+      <node id="Save" label="Save" />
+      <node id="Steal" label="Steal" />
+      <node id="Clear" label="Clear" />
+    </nodes>
+    <edges>
+      <edge id="0" source="Rebound" target="Klassux" weight="1" />
+      <edge id="1" source="Rebound" target="Pluto" weight="2" />
+      <edge id="2" source="Kickoff" target="Klassux" weight="3" />
+      <edge id="3" source="Kickoff" target="Espeon" weight="6" />
+      <edge id="4" source="Pluto" target="Clear" weight="25" />
+      <edge id="5" source="Pluto" target="Klassux" weight="5" />
+      <edge id="6" source="Pluto" target="Score" weight="1" />
+      <edge id="7" source="Pluto" target="Espeon" weight="5" />
+      <edge id="8" source="Pluto" target="Timeout" weight="1" />
+      <edge id="9" source="Pluto" target="Save" weight="1" />
+      <edge id="10" source="Pluto" target="Steal" weight="38" />
+      <edge id="11" source="Klassux" target="Miss" weight="1" />
+      <edge id="12" source="Klassux" target="Clear" weight="33" />
+      <edge id="13" source="Klassux" target="Pluto" weight="8" />
+      <edge id="14" source="Klassux" target="Espeon" weight="5" />
+      <edge id="15" source="Klassux" target="Save" weight="3" />
+      <edge id="16" source="Klassux" target="Steal" weight="34" />
+      <edge id="17" source="Espeon" target="Miss" weight="2" />
+      <edge id="18" source="Espeon" target="Clear" weight="36" />
+      <edge id="19" source="Espeon" target="Pluto" weight="5" />
+      <edge id="20" source="Espeon" target="Klassux" weight="8" />
+      <edge id="21" source="Espeon" target="Save" weight="4" />
+      <edge id="22" source="Espeon" target="Steal" weight="37" />
+      <edge id="23" source="Inbounds" target="Klassux" weight="1" />
+      <edge id="24" source="Inbounds" target="Espeon" weight="2" />
+      <edge id="25" source="Inbounds" target="Pluto" weight="3" />
+    </edges>
+  </graph>
+</gexf>

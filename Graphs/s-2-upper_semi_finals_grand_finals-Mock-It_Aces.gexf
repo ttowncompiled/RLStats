@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf version="1.1" xmlns="http://www.gexf.net/1.1draft" xmlns:viz="http://www.gexf.net/1.1draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance">
+  <graph defaultedgetype="directed" mode="static">
+    <nodes>
+      <node id="Clear" label="Clear" />
+      <node id="ViolentPanda" label="ViolentPanda" />
+      <node id="Timeout" label="Timeout" />
+      <node id="Miss" label="Miss" />
+      <node id="Rebound" label="Rebound" />
+      <node id="Kickoff" label="Kickoff" />
+      <node id="Deevo" label="Deevo" />
+      <node id="Score" label="Score" />
+      <node id="Yield" label="Yield" />
+      <node id="Inbounds" label="Inbounds" />
+      <node id="Save" label="Save" />
+      <node id="Steal" label="Steal" />
+      <node id="Paschy90" label="Paschy90" />
+    </nodes>
+    <edges>
+      <edge id="0" source="ViolentPanda" target="Steal" weight="51" />
+      <edge id="1" source="ViolentPanda" target="Clear" weight="54" />
+      <edge id="2" source="ViolentPanda" target="Yield" weight="1" />
+      <edge id="3" source="ViolentPanda" target="Score" weight="4" />
+      <edge id="4" source="ViolentPanda" target="Deevo" weight="10" />
+      <edge id="5" source="ViolentPanda" target="Timeout" weight="1" />
+      <edge id="6" source="ViolentPanda" target="Save" weight="2" />
+      <edge id="7" source="ViolentPanda" target="Miss" weight="1" />
+      <edge id="8" source="ViolentPanda" target="Paschy90" weight="8" />
+      <edge id="9" source="Rebound" target="Paschy90" weight="1" />
+      <edge id="10" source="Rebound" target="Deevo" weight="3" />
+      <edge id="11" source="Kickoff" target="ViolentPanda" weight="2" />
+      <edge id="12" source="Kickoff" target="Paschy90" weight="4" />
+      <edge id="13" source="Kickoff" target="Deevo" weight="2" />
+      <edge id="14" source="Deevo" target="ViolentPanda" weight="10" />
+      <edge id="15" source="Deevo" target="Miss" weight="2" />
+      <edge id="16" source="Deevo" target="Clear" weight="50" />
+      <edge id="17" source="Deevo" target="Yield" weight="2" />
+      <edge id="18" source="Deevo" target="Score" weight="3" />
+      <edge id="19" source="Deevo" target="Timeout" weight="1" />
+      <edge id="20" source="Deevo" target="Save" weight="4" />
+      <edge id="21" source="Deevo" target="Steal" weight="55" />
+      <edge id="22" source="Deevo" target="Paschy90" weight="9" />
+      <edge id="23" source="Inbounds" target="ViolentPanda" weight="3" />
+      <edge id="24" source="Inbounds" target="Paschy90" weight="4" />
+      <edge id="25" source="Inbounds" target="Deevo" weight="3" />
+      <edge id="26" source="Paschy90" target="ViolentPanda" weight="5" />
+      <edge id="27" source="Paschy90" target="Clear" weight="41" />
+      <edge id="28" source="Paschy90" target="Deevo" weight="12" />
+      <edge id="29" source="Paschy90" target="Score" weight="4" />
+      <edge id="30" source="Paschy90" target="Timeout" weight="1" />
+      <edge id="31" source="Paschy90" target="Save" weight="2" />
+      <edge id="32" source="Paschy90" target="Steal" weight="33" />
+    </edges>
+  </graph>
+</gexf>
