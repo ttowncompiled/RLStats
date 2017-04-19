@@ -16,28 +16,29 @@ teams = None
 with open(season_teams_file_name, 'r') as f_in:
     teams = json.loads(f_in.read().strip())
 
-match = file_in.readline().strip()
+match = file_in.readline().strip().lower().replace(' ', '_')
 
-blue_team = file_in.readline().strip()
-orange_team = file_in.readline().strip()
+blue_team = file_in.readline().strip().replace(' ', '_')
+orange_team = file_in.readline().strip().replace(' ', '_')
 
 blue_players = tuple(teams[blue_team])
 orange_players = tuple(teams[orange_team])
 
 match_name_tuple = (season, match, blue_team, orange_team)
-match_file_name = './Data/s-%d-%s-%s-v-%s.csv' % match_name_tuple
+match_file_name = './Data/s_%d-%s-%s-v-%s.csv' % match_name_tuple
 
 match_file = open(match_file_name, 'w')
 match_file.write('Game,U,V,Clock\n')
 
+# '=' : 'Pass'
+# '#' : 'Demo'
 symbols = {
     'K': 'Kickoff',
     'I': 'Inbounds',
     'R': 'Rebound',
     '-': 'Steal',
     '+': 'Clear',
-    '<': 'Yield',
-    '#': 'Demo',
+    '/': 'Yield',
     '*': 'Score',
     '!': 'Save',
     '?': 'Miss',
@@ -53,32 +54,68 @@ symbols = {
 edges = {}
 
 game = 1
+w = None
 for line in file_in:
     line = line.strip()
+    
     if line == '':
         continue
     if line == '$':
         game += 1
         continue
-    move = line.split(' ')
-    u, v, op, clock = None, None, None, None
-    if len(move) == 3:
-        u, v, clock = move
-    elif len(move) == 4:
-        u, v, op, clock = move
+    
+    if len(line.split(' ')) != 4:
+        print('Invalid entry. Must have 4 components. (%s)' % (line))
+        exit(0)
+    
+    u, v, op, clock = line.split(' ')
+            
+    if op == '#':
+        continue
+   
     t = int(clock) if clock.isdigit() else int(clock[1:])
     t = 60*(t / 100) + (t % 100)
     t = -t if clock.isdigit() else t
-    if op is None:
-        match_file.write("%s,%s,%s,%d\n" % (game, symbols[u], symbols[v], t))
-        e = "%s:%s" % (u, v)
-        if e in edges:
-            edges[e] += 1
+
+    if op == '=':
+        if not (u == 'K' or u == 'I' or u == 'R') and u != w:
+            print('Invalid entry. u != w. (%s, %s, %s, %s, %s)' % (w, u, v, op, clock))
+            exit(0)
+        if v == 'K' or v == 'I' or v == 'R':
+            print('Invalid entry. v cannot be a possession for a pass. (%s, %s, %s, %s)' % (u, v, op, clock))
+            exit(0)
+        if (u == 'A' or u == 'B' or u == 'C') and (v == 'X' or v == 'Y' or v == 'Z'):
+            print('Invalid entry. Opponents cannot pass to each other. (%s, %s, %s, %s)' % (u, v, op, clock))
+            exit(0)
+        if (u == 'X' or u == 'Y' or u == 'Z') and (v == 'A' or v == 'B' or v == 'C'):
+            print('Invalid entry. Opponents cannot pass to each other. (%s, %s, %s, %s)' % (u, v, op, clock))
+            exit(0)
+        w = v
+        match_file.write('%s,%s,%s,%d\n' % (game, symbols[u], symbols[v], t))
+        e1 = "%s:%s" % (u, v)
+        if e1 in edges:
+            edges[e1] += 1
         else:
-            edges[e] = 1
-    else:
-        match_file.write("%s,%s,%s,%d\n" % (game, symbols[u], symbols[op], t))
-        match_file.write("%s,%s,%s,%d\n" % (game, symbols[op], symbols[v], t))
+            edges[e1] = 1
+    elif op == '-':
+        if u != w:
+            print('Invalid entry. u != w. (%s, %s, %s, %s, %s)' % (w, u, v, op, clock))
+            exit(0)
+        if u == 'K' or u == 'I' or u == 'R':
+            print('Invalid entry. u cannot be a possession for a steal. (%s, %s, %s, %s)' % (u, v, op, clock))
+            exit(0)
+        if v == 'K' or v == 'I' or v == 'R':
+            print('Invalid entry. v cannot be a possession for a steal. (%s, %s, %s, %s)' % (u, v, op, clock))
+            exit(0)
+        if (u == 'A' or u == 'B' or u == 'C') and (v == 'A' or v == 'B' or v == 'C'):
+            print('Invalid entry. Teammates cannot steal from each other. (%s, %s, %s, %s)' % (u, v, op, clock))
+            exit(0)
+        if (u == 'X' or u == 'Y' or u == 'Z') and (v == 'Z' or v == 'Y' or v == 'Z'):
+            print('Invalid entry. Teammates cannot steal from each other. (%s, %s, %s, %s)' % (u, v, op, clock))
+            exit(0)
+        w = v
+        match_file.write('%s,%s,%s,%d\n' % (game, symbols[u], symbols[op], t))
+        match_file.write('%s,%s,%s,%d\n' % (game, symbols[op], symbols[v], t))
         e1 = "%s:%s" % (u, op)
         if e1 in edges:
             edges[e1] += 1
@@ -89,6 +126,129 @@ for line in file_in:
             edges[e2] += 1
         else:
             edges[e2] = 1
+    elif op == '+':
+        if u != w:
+            print('Invalid entry. u != w. (%s, %s, %s, %s, %s)' % (w, u, v, op, clock))
+            exit(0)
+        if u == 'K' or u == 'I' or u == 'R':
+            print('Invalid entry. u cannot be a possession for a clear. (%s, %s, %s, %s)' % (u, v, op, clock))
+            exit(0)
+        if v == 'K' or v == 'I' or v == 'R':
+            print('Invalid entry. v cannot be a possession for a clear. (%s, %s, %s, %s)' % (u, v, op, clock))
+            exit(0)
+        if (u == 'A' or u == 'B' or u == 'C') and (v == 'A' or v == 'B' or v == 'C'):
+            print('Invalid entry. Teammates cannot clear from each other. (%s, %s, %s, %s)' % (u, v, op, clock))
+            exit(0)
+        if (u == 'X' or u == 'Y' or u == 'Z') and (v == 'Z' or v == 'Y' or v == 'Z'):
+            print('Invalid entry. Teammates cannot clear from each other. (%s, %s, %s, %s)' % (u, v, op, clock))
+            exit(0)
+        w = v
+        match_file.write('%s,%s,%s,%d\n' % (game, symbols[u], symbols[op], t))
+        match_file.write('%s,%s,%s,%d\n' % (game, symbols[op], symbols[v], t))
+        e1 = "%s:%s" % (u, op)
+        if e1 in edges:
+            edges[e1] += 1
+        else:
+            edges[e1] = 1
+        e2 = "%s:%s" % (v, op)
+        if e2 in edges:
+            edges[e2] += 1
+        else:
+            edges[e2] = 1
+    elif op == '/':
+        if u != w:
+            print('Invalid entry. u != w. (%s, %s, %s, %s, %s)' % (w, u, v, op, clock))
+            exit(0)
+        if u == 'K' or u == 'I' or u == 'R':
+            print('Invalid entry. u cannot be a possession for a yield. (%s, %s, %s, %s)' % (u, v, op, clock))
+            exit(0)
+        if v != '/':
+            print('Invalid entry. v must be / for a yield. (%s, %s, %s, %s)' % (u, v, op, clock))
+            exit(0)
+        w = None
+        match_file.write('%s,%s,%s,%d\n' % (game, symbols[u], symbols[op], t))
+        e1 = "%s:%s" % (u, op)
+        if e1 in edges:
+            edges[e1] += 1
+        else:
+            edges[e1] = 1
+    elif op == '*':
+        if u != w:
+            print('Invalid entry. u != w. (%s, %s, %s, %s, %s)' % (w, u, v, op, clock))
+            exit(0)
+        if u == 'K' or u == 'I' or u == 'R':
+            print('Invalid entry. u cannot be a possession for a score. (%s, %s, %s, %s)' % (u, v, op, clock))
+            exit(0)
+        if v != '*':
+            print('Invalid entry. v must be * for a score. (%s, %s, %s, %s)' % (u, v, op, clock))
+            exit(0)
+        w = None
+        match_file.write('%s,%s,%s,%d\n' % (game, symbols[u], symbols[op], t))
+        e1 = "%s:%s" % (u, op)
+        if e1 in edges:
+            edges[e1] += 1
+        else:
+            edges[e1] = 1
+    elif op == '!':
+        if u != w:
+            print('Invalid entry. u != w. (%s, %s, %s, %s, %s)' % (w, u, v, op, clock))
+            exit(0)
+        if u == 'K' or u == 'I' or u == 'R':
+            print('Invalid entry. u cannot be a possession for a save. (%s, %s, %s, %s)' % (u, v, op, clock))
+            exit(0)
+        if v == 'K' or v == 'I' or v == 'R':
+            print('Invalid entry. v cannot be a possession for a save. (%s, %s, %s, %s)' % (u, v, op, clock))
+            exit(0)
+        if (u == 'A' or u == 'B' or u == 'C') and (v == 'A' or v == 'B' or v == 'C'):
+            print('Invalid entry. Teammates cannot save from each other. (%s, %s, %s, %s)' % (u, v, op, clock))
+            exit(0)
+        if (u == 'X' or u == 'Y' or u == 'Z') and (v == 'Z' or v == 'Y' or v == 'Z'):
+            print('Invalid entry. Teammates cannot save from each other. (%s, %s, %s, %s)' % (u, v, op, clock))
+            exit(0)
+        w = None
+        match_file.write('%s,%s,%s,%d\n' % (game, symbols[u], symbols[op], t))
+        e1 = "%s:%s" % (u, op)
+        if e1 in edges:
+            edges[e1] += 1
+        else:
+            edges[e1] = 1
+    elif op == '?':
+        if u != w:
+            print('Invalid entry. u != w. (%s, %s, %s, %s, %s)' % (w, u, v, op, clock))
+            exit(0)
+        if u == 'K' or u == 'I' or u == 'R':
+            print('Invalid entry. u cannot be a possession for a miss. (%s, %s, %s, %s)' % (u, v, op, clock))
+            exit(0)
+        if v != '?':
+            print('Invalid entry. v must be ? for a miss. (%s, %s, %s, %s)' % (u, v, op, clock))
+            exit(0)
+        w = None
+        match_file.write('%s,%s,%s,%d\n' % (game, symbols[u], symbols[op], t))
+        e1 = "%s:%s" % (u, op)
+        if e1 in edges:
+            edges[e1] += 1
+        else:
+            edges[e1] = 1
+    elif op == '$':
+        if u != w:
+            print('Invalid entry. u != w. (%s, %s, %s, %s, %s)' % (w, u, v, op, clock))
+            exit(0)
+        if u == 'K' or u == 'I' or u == 'R':
+            print('Invalid entry. u cannot be a possession for a stop. (%s, %s, %s, %s)' % (u, v, op, clock))
+            exit(0)
+        if v != '$':
+            print('Invalid entry. v must be $ for a stop. (%s, %s, %s, %s)' % (u, v, op, clock))
+            exit(0)
+        w = None
+        match_file.write('%s,%s,%s,%d\n' % (game, symbols[u], symbols[op], t))
+        e1 = "%s:%s" % (u, op)
+        if e1 in edges:
+            edges[e1] += 1
+        else:
+            edges[e1] = 1
+    else:
+        print('Invalid entry. Unrecognized op. (%s, %s, %s, %s)' % (u, v, op, clock))
+        exit(0)
 
 blue_g = nx.DiGraph()
 orange_g = nx.DiGraph()
