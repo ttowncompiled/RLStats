@@ -250,6 +250,8 @@ for line in file_in:
         print('Invalid entry. Unrecognized op. (%s, %s, %s, %s)' % (u, v, op, clock))
         exit(0)
 
+file_in.close()
+
 blue_g = nx.DiGraph()
 orange_g = nx.DiGraph()
 
