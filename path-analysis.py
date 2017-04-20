@@ -46,4 +46,9 @@ team_path_length.sort()
 team_flow_rate.sort()
 
 pprint(team_path_length)
+team_path_length.reverse()
+pprint(team_path_length)
+
+pprint(team_flow_rate)
+team_flow_rate.reverse()
 pprint(team_flow_rate)
