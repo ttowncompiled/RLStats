@@ -47,7 +47,7 @@ symbols['X'] = orange_players[0]
 symbols['Y'] = orange_players[1]
 symbols['Z'] = orange_players[2]
 
-file_out = open('./Paths/%s-%d.pdat' % (team_name, season), 'w')
+file_out = open('./Paths/%s-s_%d.pdat' % (team_name, season), 'w')
 
 if blue_team == team_name:
     path = ''

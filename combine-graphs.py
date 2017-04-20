@@ -63,4 +63,4 @@ for e, w in edges.iteritems():
     u, v = e.split(':')
     g_out.add_weighted_edges_from([(u, v, w)])
 
-nx.write_gexf(g_out, 'Graphs/%s-%d.gexf' % (team_name, season))
+nx.write_gexf(g_out, 'Graphs/%s-s_%d.gexf' % (team_name, season))
