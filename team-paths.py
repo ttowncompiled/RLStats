@@ -19,8 +19,6 @@ symbols = {
 
 team_name = sys.argv[1]
 
-file_out = open('./Paths/%s.pdat' % team_name, 'w')
-
 file_in = open(sys.argv[2], 'r')
 
 season = int(file_in.readline().strip())
@@ -48,6 +46,8 @@ symbols['C'] = blue_players[2]
 symbols['X'] = orange_players[0]
 symbols['Y'] = orange_players[1]
 symbols['Z'] = orange_players[2]
+
+file_out = open('./Paths/%s-%d.pdat' % (team_name, season), 'w')
 
 if blue_team == team_name:
     path = ''
