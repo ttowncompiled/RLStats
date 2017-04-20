@@ -72,7 +72,7 @@ if blue_team == team_name:
             path = ''
         else:
             path = ''
-        
+
         if clock == '0':
             path = ''
 elif orange_team == team_name:
@@ -85,15 +85,15 @@ elif orange_team == team_name:
         if op == '#':
             continue
         if (u == 'K' or u == 'I' or u == 'R') and (v == 'X' or v == 'Y' or v == 'Z'):
-            path = '%s %s %s' % (clock, symbols[u], symbols[v])
+            path = '%s %s %s ' % (clock, symbols[u], symbols[v])
         elif op != '!' and (u == 'A' or u == 'B' or u == 'C') and (v == 'X' or v == 'Y' or v == 'Z'):
-            path = '%s %s %s' % (clock, symbols[op], symbols[v])
+            path = '%s %s %s ' % (clock, symbols[op], symbols[v])
         elif (u == 'X' or u == 'Y' or u == 'Z') and (v == 'X' or v == 'Y' or v == 'Z'):
-            path += '%s %s' % (symbols[u] , symbols[v])
+            path += '%s ' % (symbols[v])
         elif (u == 'X' or u == 'Y' or u == 'Z'):
             if path == '':
                 continue
-            path += '%s %s %s\n' % (symbols[u], symbols[op], clock)
+            path += '%s %s\n' % (symbols[op], clock)
             file_out.write(path)
             path = ''
         else:
@@ -155,7 +155,7 @@ if blue_team == team_name:
             path = ''
         else:
             path = ''
-        
+
         if clock == '0':
             path = ''
 elif orange_team == team_name:
@@ -168,15 +168,15 @@ elif orange_team == team_name:
         if op == '#':
             continue
         if (u == 'K' or u == 'I' or u == 'R') and (v == 'X' or v == 'Y' or v == 'Z'):
-            path = '%s %s %s' % (clock, symbols[u], symbols[v])
+            path = '%s %s %s ' % (clock, symbols[u], symbols[v])
         elif op != '!' and (u == 'A' or u == 'B' or u == 'C') and (v == 'X' or v == 'Y' or v == 'Z'):
-            path = '%s %s %s' % (clock, symbols[op], symbols[v])
+            path = '%s %s %s ' % (clock, symbols[op], symbols[v])
         elif (u == 'X' or u == 'Y' or u == 'Z') and (v == 'X' or v == 'Y' or v == 'Z'):
-            path += '%s %s' % (symbols[u] , symbols[v])
+            path += '%s ' % (symbols[v])
         elif (u == 'X' or u == 'Y' or u == 'Z'):
             if path == '':
                 continue
-            path += '%s %s %s\n' % (symbols[u], symbols[op], clock)
+            path += '%s %s\n' % (symbols[op], clock)
             file_out.write(path)
             path = ''
         else:
