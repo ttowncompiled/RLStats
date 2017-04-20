@@ -78,6 +78,7 @@ if blue_team == team_name:
 elif orange_team == team_name:
     path = ''
     for line in file_in:
+        line = line.strip()
         if line == '' or line == '$':
             continue
         u, v, op, clock = line.split(' ')
@@ -160,6 +161,7 @@ if blue_team == team_name:
 elif orange_team == team_name:
     path = ''
     for line in file_in:
+        line = line.strip()
         if line == '' or line == '$':
             continue
         u, v, op, clock = line.split(' ')
