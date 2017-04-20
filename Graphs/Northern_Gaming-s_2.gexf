@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf version="1.1" xmlns="http://www.gexf.net/1.1draft" xmlns:viz="http://www.gexf.net/1.1draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance">
+  <graph defaultedgetype="directed" mode="static">
+    <nodes>
+      <node id="Miztik" label="Miztik" />
+      <node id="Timeout" label="Timeout" />
+      <node id="Miss" label="Miss" />
+      <node id="Clear" label="Clear" />
+      <node id="Kickoff" label="Kickoff" />
+      <node id="Remkoe" label="Remkoe" />
+      <node id="Score" label="Score" />
+      <node id="Yield" label="Yield" />
+      <node id="Inbounds" label="Inbounds" />
+      <node id="Maestro" label="Maestro" />
+      <node id="Save" label="Save" />
+      <node id="Steal" label="Steal" />
+      <node id="Rebound" label="Rebound" />
+    </nodes>
+    <edges>
+      <edge id="0" source="Miztik" target="Miss" weight="2.0" />
+      <edge id="1" source="Miztik" target="Clear" weight="95.0" />
+      <edge id="2" source="Miztik" target="Yield" weight="1.0" />
+      <edge id="3" source="Miztik" target="Score" weight="7.0" />
+      <edge id="4" source="Miztik" target="Timeout" weight="2.0" />
+      <edge id="5" source="Miztik" target="Maestro" weight="17.0" />
+      <edge id="6" source="Miztik" target="Save" weight="6.0" />
+      <edge id="7" source="Miztik" target="Steal" weight="90.0" />
+      <edge id="8" source="Miztik" target="Remkoe" weight="16.0" />
+      <edge id="9" source="Clear" target="Maestro" weight="0" />
+      <edge id="10" source="Clear" target="Miztik" weight="0" />
+      <edge id="11" source="Clear" target="Remkoe" weight="0" />
+      <edge id="12" source="Kickoff" target="Maestro" weight="7.0" />
+      <edge id="13" source="Kickoff" target="Miztik" weight="6.0" />
+      <edge id="14" source="Kickoff" target="Remkoe" weight="5.0" />
+      <edge id="15" source="Remkoe" target="Miztik" weight="19.0" />
+      <edge id="16" source="Remkoe" target="Miss" weight="1.0" />
+      <edge id="17" source="Remkoe" target="Clear" weight="89.0" />
+      <edge id="18" source="Remkoe" target="Yield" weight="0" />
+      <edge id="19" source="Remkoe" target="Score" weight="5.0" />
+      <edge id="20" source="Remkoe" target="Timeout" weight="1.0" />
+      <edge id="21" source="Remkoe" target="Maestro" weight="20.0" />
+      <edge id="22" source="Remkoe" target="Save" weight="4.0" />
+      <edge id="23" source="Remkoe" target="Steal" weight="83.0" />
+      <edge id="24" source="Inbounds" target="Maestro" weight="2.0" />
+      <edge id="25" source="Inbounds" target="Miztik" weight="2.0" />
+      <edge id="26" source="Inbounds" target="Remkoe" weight="2.0" />
+      <edge id="27" source="Maestro" target="Miztik" weight="16.0" />
+      <edge id="28" source="Maestro" target="Steal" weight="93.0" />
+      <edge id="29" source="Maestro" target="Clear" weight="104.0" />
+      <edge id="30" source="Maestro" target="Yield" weight="1.0" />
+      <edge id="31" source="Maestro" target="Score" weight="7.0" />
+      <edge id="32" source="Maestro" target="Timeout" weight="0" />
+      <edge id="33" source="Maestro" target="Save" weight="3.0" />
+      <edge id="34" source="Maestro" target="Miss" weight="1.0" />
+      <edge id="35" source="Maestro" target="Remkoe" weight="19.0" />
+      <edge id="36" source="Steal" target="Maestro" weight="0" />
+      <edge id="37" source="Steal" target="Miztik" weight="0" />
+      <edge id="38" source="Steal" target="Remkoe" weight="0" />
+      <edge id="39" source="Rebound" target="Maestro" weight="3.0" />
+      <edge id="40" source="Rebound" target="Miztik" weight="5.0" />
+      <edge id="41" source="Rebound" target="Remkoe" weight="4.0" />
+    </edges>
+  </graph>
+</gexf>

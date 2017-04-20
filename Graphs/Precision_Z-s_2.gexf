@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf version="1.1" xmlns="http://www.gexf.net/1.1draft" xmlns:viz="http://www.gexf.net/1.1draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance">
+  <graph defaultedgetype="directed" mode="static">
+    <nodes>
+      <node id="Sikii" label="Sikii" />
+      <node id="Timeout" label="Timeout" />
+      <node id="Miss" label="Miss" />
+      <node id="Clear" label="Clear" />
+      <node id="Kickoff" label="Kickoff" />
+      <node id="Kaydop" label="Kaydop" />
+      <node id="Skyline" label="Skyline" />
+      <node id="Score" label="Score" />
+      <node id="Yield" label="Yield" />
+      <node id="Inbounds" label="Inbounds" />
+      <node id="Save" label="Save" />
+      <node id="Steal" label="Steal" />
+      <node id="Rebound" label="Rebound" />
+    </nodes>
+    <edges>
+      <edge id="0" source="Sikii" target="Steal" weight="60.0" />
+      <edge id="1" source="Sikii" target="Clear" weight="71.0" />
+      <edge id="2" source="Sikii" target="Yield" weight="0" />
+      <edge id="3" source="Sikii" target="Kaydop" weight="11.0" />
+      <edge id="4" source="Sikii" target="Skyline" weight="8.0" />
+      <edge id="5" source="Sikii" target="Score" weight="8.0" />
+      <edge id="6" source="Sikii" target="Timeout" weight="0" />
+      <edge id="7" source="Sikii" target="Save" weight="0" />
+      <edge id="8" source="Sikii" target="Miss" weight="4.0" />
+      <edge id="9" source="Clear" target="Kaydop" weight="0" />
+      <edge id="10" source="Clear" target="Skyline" weight="0" />
+      <edge id="11" source="Clear" target="Sikii" weight="0" />
+      <edge id="12" source="Kickoff" target="Kaydop" weight="4.0" />
+      <edge id="13" source="Kickoff" target="Skyline" weight="2.0" />
+      <edge id="14" source="Kickoff" target="Sikii" weight="7.0" />
+      <edge id="15" source="Kaydop" target="Sikii" weight="12.0" />
+      <edge id="16" source="Kaydop" target="Miss" weight="1.0" />
+      <edge id="17" source="Kaydop" target="Clear" weight="74.0" />
+      <edge id="18" source="Kaydop" target="Yield" weight="0" />
+      <edge id="19" source="Kaydop" target="Skyline" weight="20.0" />
+      <edge id="20" source="Kaydop" target="Score" weight="3.0" />
+      <edge id="21" source="Kaydop" target="Timeout" weight="3.0" />
+      <edge id="22" source="Kaydop" target="Save" weight="2.0" />
+      <edge id="23" source="Kaydop" target="Steal" weight="85.0" />
+      <edge id="24" source="Skyline" target="Sikii" weight="10.0" />
+      <edge id="25" source="Skyline" target="Steal" weight="65.0" />
+      <edge id="26" source="Skyline" target="Clear" weight="63.0" />
+      <edge id="27" source="Skyline" target="Yield" weight="1.0" />
+      <edge id="28" source="Skyline" target="Kaydop" weight="15.0" />
+      <edge id="29" source="Skyline" target="Score" weight="4.0" />
+      <edge id="30" source="Skyline" target="Timeout" weight="0" />
+      <edge id="31" source="Skyline" target="Save" weight="0" />
+      <edge id="32" source="Skyline" target="Miss" weight="4.0" />
+      <edge id="33" source="Inbounds" target="Kaydop" weight="1.0" />
+      <edge id="34" source="Inbounds" target="Skyline" weight="3.0" />
+      <edge id="35" source="Inbounds" target="Sikii" weight="0" />
+      <edge id="36" source="Steal" target="Kaydop" weight="0" />
+      <edge id="37" source="Steal" target="Skyline" weight="0" />
+      <edge id="38" source="Steal" target="Sikii" weight="0" />
+      <edge id="39" source="Rebound" target="Kaydop" weight="3.0" />
+      <edge id="40" source="Rebound" target="Skyline" weight="1.0" />
+      <edge id="41" source="Rebound" target="Sikii" weight="3.0" />
+    </edges>
+  </graph>
+</gexf>
