@@ -25,7 +25,7 @@ blue_players = tuple(teams[blue_team])
 orange_players = tuple(teams[orange_team])
 
 match_name_tuple = (season, match, blue_team, orange_team)
-match_file_name = './Data/s_%d-%s-%s-v-%s.csv' % match_name_tuple
+match_file_name = './Out/s_%d-%s-%s-v-%s.csv' % match_name_tuple
 
 match_file = open(match_file_name, 'w')
 match_file.write('Game,U,V,Clock\n')
@@ -272,7 +272,7 @@ for e, weight in edges.iteritems():
     if (u == 'X' or u == 'Y' or u == 'Z') or (v == 'X' or v == 'Y' or v == 'Z'):
         orange_g.add_weighted_edges_from([(symbols[u], symbols[v], weight)])
 
-nx.write_gexf(blue_g, 'Graphs/s-%d-%s-%s.gexf' % (season, match, blue_team))
-nx.write_gexf(orange_g, 'Graphs/s-%d-%s-%s.gexf' % (season, match, orange_team))
+nx.write_gexf(blue_g, 'Out/s-%d-%s-%s.gexf' % (season, match, blue_team))
+nx.write_gexf(orange_g, 'Out/s-%d-%s-%s.gexf' % (season, match, orange_team))
 
 match_file.close()
