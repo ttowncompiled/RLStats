@@ -34,7 +34,7 @@ for t in teams:
             start, stop = int(parts[0]), int(parts[-1])
             nodes = parts[0:-1]
             paths += 1
-            lengths += len(nodes)
+            lengths += len(nodes) - 2 - 1
             flow += (abs(start - stop) * 1.0) / len(nodes)
     avg_path_len = (lengths * 1.0) / paths
     avg_flow_rate = (flow * 1.0) / paths
