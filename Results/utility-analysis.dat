@@ -1,0 +1,33 @@
+Rankings according to average individual flow centrality:
+[(0.424, u'Orbit'),
+ (0.426, u'Precision_Z'),
+ (0.431, u'Genesis'),
+ (0.436, u'Northern_Gaming'),
+ (0.438, u'Mock-It_Aces'),
+ (0.455, u'NRG'),
+ (0.457, u'FlipSid3_Tactics'),
+ (0.457, u'Take_3')]
+Kendall-Tau constant:
+KendalltauResult(correlation=0.14285714285714285, pvalue=0.62069071707535473)
+Rankings according to average restricted individual flow centrality:
+[(0.439, u'NRG'),
+ (0.438, u'Take_3'),
+ (0.437, u'FlipSid3_Tactics'),
+ (0.421, u'Genesis'),
+ (0.418, u'Northern_Gaming'),
+ (0.416, u'Mock-It_Aces'),
+ (0.415, u'Orbit'),
+ (0.413, u'Precision_Z')]
+Kendall-Tau constant:
+KendalltauResult(correlation=-0.2857142857142857, pvalue=0.32229959587191936)
+Rankings according to average player utility:
+[(0.02, u'Genesis'),
+ (0.041, u'Orbit'),
+ (0.048, u'Take_3'),
+ (0.059, u'Precision_Z'),
+ (0.068, u'Mock-It_Aces'),
+ (0.069, u'FlipSid3_Tactics'),
+ (0.071, u'Northern_Gaming'),
+ (0.076, u'NRG')]
+Kendall-Tau constant:
+KendalltauResult(correlation=0.14285714285714285, pvalue=0.62069071707535473)

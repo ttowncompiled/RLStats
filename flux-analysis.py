@@ -2,6 +2,7 @@ import json
 import networkx as nx
 import os
 from pprint import pprint
+from scipy.stats import kendalltau
 import sys
 
 season = int(sys.argv[1])
@@ -39,8 +40,19 @@ for t, players in teams.iteritems():
         player_stats[p] = stats
     team_stats[t] = player_stats
 
+print('Invidual shooting percentage stats:')
 pprint(team_stats)
 
+true_ranks = [
+    'FlipSid3_Tactics',
+    'Mock-It_Aces',
+    'Northern_Gaming',
+    'Take_3',
+    'NRG',
+    'Precision_Z',
+    'Genesis',
+    'Orbit'
+]
 ranks = []
 
 for t, player_stats in team_stats.iteritems():
@@ -51,9 +63,11 @@ for t, player_stats in team_stats.iteritems():
     ranks.append((round(s, 3), t))
 
 ranks.sort()
-ranks.reverse()
 
+print('Rankings according to average shooting percentage:')
 pprint(ranks)
+print('Kendall-Tau constant:')
+print(kendalltau(true_ranks, map(lambda x: x[1], ranks)))
 
 nodes = ['Steal', 'Clear', 'Score', 'Save', 'Miss', 'Yield', 'Timeout']
 ranks = []
@@ -84,6 +98,8 @@ for t, player_stats in team_stats.iteritems():
     ranks.append((round(flux, 3), t))
 
 ranks.sort()
-ranks.reverse()
 
+print('Rankings according to uphill/downhill flux:')
 pprint(ranks)
+print('Kendall-Tau constant:')
+print(kendalltau(true_ranks, map(lambda x: x[1], ranks)))

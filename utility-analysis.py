@@ -1,6 +1,7 @@
 import json
 import os
 from pprint import pprint
+from scipy.stats import kendalltau
 import sys
 
 season = int(sys.argv[1])
@@ -39,6 +40,17 @@ for t, players in teams.iteritems():
         player_flow[p] = round((player_flow[p] * 1.0) / paths, 3)
     team_flow[t] = player_flow
 
+true_ranks = [
+    'FlipSid3_Tactics',
+    'Mock-It_Aces',
+    'Northern_Gaming',
+    'Take_3',
+    'NRG',
+    'Precision_Z',
+    'Genesis',
+    'Orbit'
+]
+
 ranks = []
 for t, player_flow in team_flow.iteritems():
     f = 0
@@ -48,9 +60,11 @@ for t, player_flow in team_flow.iteritems():
     ranks.append((f, t))
 
 ranks.sort()
-ranks.reverse()
 
+print('Rankings according to average individual flow centrality:')
 pprint(ranks)
+print('Kendall-Tau constant:')
+print(kendalltau(true_ranks, map(lambda x: x[1], ranks)))
 
 team_flow = {}
 for t, players in teams.iteritems():
@@ -90,7 +104,10 @@ for t, player_flow in team_flow.iteritems():
 ranks.sort()
 ranks.reverse()
 
+print('Rankings according to average restricted individual flow centrality:')
 pprint(ranks)
+print('Kendall-Tau constant:')
+print(kendalltau(true_ranks, map(lambda x: x[1], ranks)))
 
 team_flow = {}
 for t, players in teams.iteritems():
@@ -133,6 +150,8 @@ for t, player_flow in team_flow.iteritems():
     ranks.append((f, t))
 
 ranks.sort()
-ranks.reverse()
 
+print('Rankings according to average player utility:')
 pprint(ranks)
+print('Kendall-Tau constant:')
+print(kendalltau(true_ranks, map(lambda x: x[1], ranks)))

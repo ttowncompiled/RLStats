@@ -1,0 +1,22 @@
+Rankings according to average team path length:
+[(1.312807881773399, u'Orbit'),
+ (1.318407960199005, u'Precision_Z'),
+ (1.3375796178343948, u'Northern_Gaming'),
+ (1.3445595854922279, u'Mock-It_Aces'),
+ (1.353448275862069, u'Genesis'),
+ (1.4264264264264264, u'NRG'),
+ (1.4423076923076923, u'FlipSid3_Tactics'),
+ (1.4520958083832336, u'Take_3')]
+Kendall-Tau constant:
+KendalltauResult(correlation=0.0, pvalue=1.0)
+Rankings according to average team flow rate:
+[(1.1695054945054948, u'FlipSid3_Tactics'),
+ (1.1884468295090058, u'Mock-It_Aces'),
+ (1.2610548448235015, u'Precision_Z'),
+ (1.3792614042614044, u'NRG'),
+ (1.4515392781316352, u'Northern_Gaming'),
+ (1.5276779773785765, u'Take_3'),
+ (2.155115968801314, u'Genesis'),
+ (3.756066737039642, u'Orbit')]
+Kendall-Tau constant:
+KendalltauResult(correlation=0.64285714285714279, pvalue=0.0259524560223745)

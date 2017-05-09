@@ -1,6 +1,7 @@
 import json
 import os
 from pprint import pprint
+from scipy.stats import kendalltau
 import sys
 
 season = int(sys.argv[1])
@@ -15,6 +16,17 @@ with open(season_teams_file_name, 'r') as f_in:
     teams = json.loads(f_in.read().strip())
 
 teams = teams.keys()
+
+true_ranks = [
+    'FlipSid3_Tactics',
+    'Mock-It_Aces',
+    'Northern_Gaming',
+    'Take_3',
+    'NRG',
+    'Precision_Z',
+    'Genesis',
+    'Orbit'
+]
 
 team_path_length = []
 team_flow_rate = []
@@ -45,10 +57,12 @@ for t in teams:
 team_path_length.sort()
 team_flow_rate.sort()
 
+print('Rankings according to average team path length:')
 pprint(team_path_length)
-team_path_length.reverse()
-pprint(team_path_length)
+print('Kendall-Tau constant:')
+print(kendalltau(true_ranks, map(lambda x: x[1], team_path_length)))
 
+print('Rankings according to average team flow rate:')
 pprint(team_flow_rate)
-team_flow_rate.reverse()
-pprint(team_flow_rate)
+print('Kendall-Tau constant:')
+print(kendalltau(true_ranks, map(lambda x: x[1], team_flow_rate)))
